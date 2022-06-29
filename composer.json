@@ -1,0 +1,54 @@
+{
+    "name": "yiidb/active-record",
+    "type": "library",
+    "description": "PHP Active Record (For Yii)",
+    "keywords": [
+        "yii",
+        "active-record",
+        "doctrine"
+    ],
+    "homepage": "https://github.com/yiidb/active-record",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiidb/active-record/issues?state=open",
+        "source": "https://github.com/yiidb/active-record"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1",
+        "yiidb/dbal": "^1.0-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "YiiDb\\ActiveRecord\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YiiDb\\ActiveRecord\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "config-plugin-options": {
+            "source-directory": "config"
+        },
+        "config-plugin": {
+            "params": "params.php",
+            "common": "common.php",
+            "console": "console.php",
+            "events-console": "events-console.php",
+            "events-web": "events-web.php"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --no-interaction",
+        "test-watch": "phpunit-watcher watch"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
